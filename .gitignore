@@ -31,5 +31,5 @@ __pycache__/
 # Environments
 .venv*
 venv*/
-mobile/android/.env
+.env
 

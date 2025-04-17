@@ -6,6 +6,6 @@ class Config(BaseSettings):
     access_Api: str
     app: str
 
-config = Config(_env_file=".env")
+config = Config(_env_file="../../.env")
 
 
