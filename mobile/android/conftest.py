@@ -11,6 +11,9 @@ from selene import browser, support
 import os
 from mobile.android.config import config
 from appium import webdriver
+
+
+
 def init_app_session(options):
     with allure.step('init app session'):
         browser.config.driver = webdriver.Remote(
