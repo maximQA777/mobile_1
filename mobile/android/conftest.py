@@ -77,8 +77,8 @@ def ios_management():
 
         # Set other BrowserStack capabilities
         "bstack:options": {
-            "userName": config.bstack_userName,
-            "accessKey": config.bstack_accessKey,
+            'userName': config.user_Name,
+            'accessKey': config.access_Api,
             "projectName": "First Python project",
             "buildName": "browserstack-build-1",
             "sessionName": "BStack first_test"
