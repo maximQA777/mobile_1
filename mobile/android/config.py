@@ -7,3 +7,5 @@ class Config(BaseSettings):
     app: str
 
 config = Config(_env_file=".env")
+
+
