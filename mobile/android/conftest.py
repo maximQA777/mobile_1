@@ -6,10 +6,13 @@ from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 from selene import browser, support
 import os
-from mobile.android.config import config
-import utils
+from mobile.android import config
 from appium import webdriver
+import sys
+from pathlib import Path
 
+# Добавляем корень проекта в пути поиска
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 def init_app_session(options):
     with allure.step('init app session'):

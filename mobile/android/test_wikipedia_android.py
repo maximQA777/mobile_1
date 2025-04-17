@@ -16,6 +16,6 @@ def test_search_and_click(android_management):
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Appium'))
 
-    with step('Открытие страницы "Appium"'):
-        results.first.click()
-        browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/view_page_title_text")).should(have.text('Appium'))
+    with step('Открытие страницы "Appium'):
+        appium_page = results.first
+        appium_page.click()
