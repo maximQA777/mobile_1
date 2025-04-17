@@ -1,5 +1,9 @@
+import sys
+from pathlib import Path
 
+from mobile.android.utils import attach
 
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 import allure
 import pytest
 import allure_commons
@@ -52,6 +56,10 @@ def android_management():
 
     init_app_session(options)
     yield
+    attach.attach_screenshot(browser)
+    attach.attach_xml(browser)
+    attach.attach_bstack_video(browser)
+    browser.quit()
 
 @pytest.fixture(scope='function')
 def ios_management():
@@ -76,3 +84,7 @@ def ios_management():
 
     init_app_session(options)
     yield
+    attach.attach_screenshot(browser)
+    attach.attach_xml(browser)
+    attach.attach_bstack_video(browser)
+    browser.quit()

@@ -32,5 +32,4 @@ __pycache__/
 .venv*
 venv*/
 .env
-mobile/android/.env
 allure-results
