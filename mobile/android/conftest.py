@@ -24,17 +24,6 @@ def init_app_session(options):
     )
 
 
-def tear_down_session():
-    utils.attach.attach_screenshot(browser)
-    utils.attach.attach_xml(browser)
-
-    session_id = browser.driver.session_id
-
-    with allure.step('tear down app session'):
-        browser.quit()
-
-    utils.attach.attach_bstack_video(session_id)
-
 
 @pytest.fixture(scope='function')
 def android_management():
@@ -62,7 +51,6 @@ def android_management():
 
     init_app_session(options)
     yield
-    tear_down_session()
 
 @pytest.fixture(scope='function')
 def ios_management():
@@ -87,4 +75,3 @@ def ios_management():
 
     init_app_session(options)
     yield
-    tear_down_session()
